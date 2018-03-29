@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <title>1-Click YouTube video thumbnail generator - Youthumb</title>
+  <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+  <link href="css/bootstrap.min.css" rel="stylesheet" />
+  <link href="css/mdb.min.css" rel="stylesheet" />
+  <link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+  <div style="height: 100vh">
+    <div class="flex-center flex-column">
+      <h1 class="animated fadeIn mb-4">Youthumb</h1>
+      <h5 class="animated fadeIn mb-3">Generate thumbnail from YouTube video instantly.</h5>
+      <p class="text-muted" id="js-enabled-message">Please ensure that your Javascript is enabled.</p>
+      <form class="animated fadeIn">
+        <label class="sr-only" for="url">Youtube video URL:</label>
+        <div class="md-form input-group mb-3">
+          <input type="text" class="form-control pl-0 rounded-0 mr-2" placeholder="https://www.youtube.com/watch?v=" name="url" id="url" />
+          <span class="input-group-btn"><button class="btn btn-danger mb-0" type="button" id="generate" data-toggle="modal" data-target="#ModalPortfolio1">Generate</button></span>
+        </div>
+      </form>
+      <footer><small>
+        Made with <i class="fa fa-heart"></i> by <a href="https://www.hostibox.com" target="_blank" title="Cheap web hosting">Hostibox</a>
+        − Source code: <a href="#"><i class="fa fa-github"></i> Github</a> − Youthumb is not affiliated with
+        <a href="https://www.youtube.com" target="_blank" rel="nofollow">YouTube</a> − YouTube is a trademark of its owner −
+        Youthumb doesn't host any video or any thumbnail − <a href="#" data-toggle="modal" data-target="#ModalSupportUs">Support this free service</a>
+      </small></footer>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalPortfolio1" tabindex="-1" role="dialog" aria-labelledby="ModalPortfolio1Label" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalPortfolio1Label">Youtube thumbnail</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align:center;">Click on the picture to download it.</p>
+          <p style="text-align:center;">
+            <a href="#" target="_blank" id="url1"><img src="" alt="Youtube thumbnail" id="img1" /></a>
+            <a href="#" target="_blank" id="url2"><img src="" alt="Youtube thumbnail" id="img2" /></a>
+            <a href="#" target="_blank" id="url3"><img src="" alt="Youtube thumbnail" id="img3" /></a>
+            <a href="#" target="_blank" id="url4"><img src="" alt="Youtube thumbnail" id="img4" /></a>
+          </p>
+          <p style="text-align:center;">
+            <a href="#" target="_blank" id="url5"><img src="" alt="Youtube thumbnail" id="img5" /></a>
+          </p>
+          <p style="text-align:center;">
+            <a href="#" target="_blank" id="url6"><img src="" alt="Youtube thumbnail" id="img6" /></a>
+          </p>
+          <p style="text-align:center;">
+            <a href="#" target="_blank" id="url7"><img src="" alt="Youtube thumbnail" id="img7" /></a>
+          </p>
+          <p style="text-align:center;">
+            <a href="#" target="_blank" id="url8"><img src="" alt="Youtube thumbnail" id="img8" /></a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalSupportUs" tabindex="-1" role="dialog" aria-labelledby="ModalSupportUsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalSupportUsLabel">Support YouThumb</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align:justify;">
+            Running a such service requires time and money. You can support and contribute on maintenance of this free
+            service with these actions:
+          </p>
+          <p style="text-align:center;">
+            <a class="btn btn-primary" href="https://github.com/Hostibox/youthumb/issues" target="_blank"><i class="fa fa-gears"></i> Suggest features</a>
+            <a class="btn btn-primary" href="https://github.com/Hostibox/youthumb/issues" target="_blank"><i class="fa fa-bug"></i> Report a bug</a>
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="ModalUnvalid" tabindex="-1" role="dialog" aria-labelledby="ModalUnvalidLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="ModalUnvalidLabel">Unvalid URL</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p style="text-align:justify;">
+            We are unable to parse URL. Maybe, this is not a YouTube URL.
+          </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/mdb.min.js"></script>
+
+  <script type="text/javascript">
+    var url;
+    var video_id;
+    $(document).ready(function(){
+      $('#js-enabled-message').replaceWith('');
+    });
+    $('#generate').click(function() {
+      url = $('#url').val();
+      videoid = url.match(/(?:https?:\/{2})?(?:w{3}\.)?youtu(?:be)?\.(?:com|be)(?:\/watch\?v=|\/)([^\s&]+)/);
+      if(videoid != null) {
+        videoid = videoid[1];
+        $('#url1').attr('href', 'https://img.youtube.com/vi/' + videoid + '/default.jpg');
+        $('#img1').attr('src',  'https://img.youtube.com/vi/' + videoid + '/default.jpg');
+        $('#url2').attr('href', 'https://img.youtube.com/vi/' + videoid + '/3.jpg');
+        $('#img2').attr('src',  'https://img.youtube.com/vi/' + videoid + '/3.jpg');
+        $('#url3').attr('href', 'https://img.youtube.com/vi/' + videoid + '/1.jpg');
+        $('#img3').attr('src',  'https://img.youtube.com/vi/' + videoid + '/1.jpg');
+        $('#url4').attr('href', 'https://img.youtube.com/vi/' + videoid + '/2.jpg');
+        $('#img4').attr('src',  'https://img.youtube.com/vi/' + videoid + '/2.jpg');
+        $('#url5').attr('href', 'https://img.youtube.com/vi/' + videoid + '/mqdefault.jpg');
+        $('#img5').attr('src',  'https://img.youtube.com/vi/' + videoid + '/mqdefault.jpg');
+        $('#url6').attr('href', 'https://img.youtube.com/vi/' + videoid + '/0.jpg');
+        $('#img6').attr('src',  'https://img.youtube.com/vi/' + videoid + '/0.jpg');
+        $('#url7').attr('href', 'https://img.youtube.com/vi/' + videoid + '/hqdefault.jpg');
+        $('#img7').attr('src',  'https://img.youtube.com/vi/' + videoid + '/hqdefault.jpg');
+        $('#url8').attr('href', 'https://img.youtube.com/vi/' + videoid + '/maxresdefault.jpg');
+        $('#img8').attr('src',  'https://img.youtube.com/vi/' + videoid + '/maxresdefault.jpg');
+        return true;
+      }else{
+        $('#ModalUnvalid').modal('show');
+        return false;
+      }
+    });
+  </script>
+</body>
+</html>
